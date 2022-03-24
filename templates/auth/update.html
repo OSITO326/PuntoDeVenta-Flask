@@ -1,0 +1,11 @@
+{% extends 'base/user.html' %}
+
+{% block header %}
+  <h1>{% block title %}Editar Usuario {% endblock %}</h1>
+{% endblock %}
+
+{% block body %}
+  <div class="mb-3">
+      {% include 'partials/auth/_updateForm.html' %}
+  </div>
+{% endblock %}

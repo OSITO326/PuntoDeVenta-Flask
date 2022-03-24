@@ -1,0 +1,32 @@
+<div class="mb-5">
+  <form action="{{url_for('user.show_users')}}" method="post" class="card" >
+    <div class="card-body p-4">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Ingrese su nombre</label>
+        <input type="text" name="name" placeholder="Write your name" class="form-control" id="exampleFormControlInput1 validationDefault01" required />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Ingrese su apellido</label>
+        <input type="text" name="lastname" placeholder="Write your lastname" class="form-control" id="exampleFormControlInput1 validationDefault01" required />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Ingrese su email</label>
+        <input type="text" name="email" placeholder="Write your email" class="form-control" id="exampleFormControlInput1 validationDefault01" required />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Ingrese su número de teléfono</label>
+        <input type="text" name="phone" placeholder="Write your phone number" class="form-control" id="exampleFormControlInput1 validationDefault01" pattern="[0-9]+" required />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Ingrese su nombre de usuario</label>
+        <input type="text" name="username" placeholder="Write your username" class="form-control" id="exampleFormControlInput1 validationDefault01" required />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Ingrese su contraseña</label>
+        <input type="text" name="password" placeholder="Write your password" class="form-control" id="exampleFormControlInput1 validationDefault01" required />
+      </div>
+      <button class="btn btn-primary">Registrar usuario</button>
+    </div>
+    <a href="{{url_for('user.login')}}" class="btn btn-danger" role="button">Cancelar</a>
+  </form>
+</div>

@@ -1,0 +1,67 @@
+body {
+  /*background: #2E3440;*/
+  /*background-color: #ffffff;*/
+  /*sea*/
+  background: #485563;  [> fallback for old browsers <]
+background: -webkit-linear-gradient(to right, #29323c, #485563);  [> Chrome 10-25, Safari 5.1-6 <]
+background: linear-gradient(to right, #29323c, #485563); [> W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ <]
+}
+
+input[type="text"] {
+  background-color: #ECEFF4;
+}
+
+.card-body {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #ECEFF4;
+}
+
+.btn-primary:hover {
+  background: #5E81AC;
+  border: 1px solid #5E81AC;
+}
+
+.btn-primary {
+  background: #81A1C1;
+  border: 1px solid #81A1C1;
+}
+
+.alert-success {
+  background-color: #a3be8c;
+}
+
+.btn-danger {
+  background-color: #bf616a;
+  border: 1px solid #bf616a;
+}
+
+.btn-danger:hover {
+  background-color: #c74e59;
+}
+
+.btn-warning {
+  background-color: #ebcb8b;
+  border: 1px solid #ebcb8b;
+}
+
+.btn-warning:hover {
+  background-color: #edc677;
+}
+
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.h-custom {
+  height: calc(100% - 73px);
+}
+
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
+}

@@ -1,0 +1,39 @@
+{% extends 'base/user.html' %}
+
+{% block header %}
+  <h1>{% block title %}Usuarios Registrados{% endblock %}</h1>
+{% endblock %}
+
+{% block body %}
+    <div class="mb-3">
+      <table class="table table-bordered table-hover table-dark table-stripped card-body">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Número de teléfono</th>
+        <th>Username</th>
+        <th colspan="2">Operationes</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+          <td>{{ user.name }}</td>
+          <td>{{ user.lastname }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.username }}</td>
+          <td>
+          <a href="{{ url_for('user.update_user', id=user.id) }}" class="btn btn-warning btn-sm">Editar</a>
+          </td>
+          <td>
+          <a href="{{ url_for('user.delete_user', id=user.id) }}" class="btn btn-danger btn-sm btn-delete">Eliminar</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+{% endblock %}

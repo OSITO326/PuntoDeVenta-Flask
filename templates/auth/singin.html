@@ -1,0 +1,9 @@
+{% extends 'base/login.html' %}
+
+{% block header %}
+  <h1>{% block title %}Inicio Sesión{% endblock %}</h1>
+{% endblock %}
+
+{% block body %}
+  {% include 'partials/auth/_loginForm.html' %}
+{% endblock %}
