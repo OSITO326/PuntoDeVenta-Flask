@@ -1,0 +1,25 @@
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="mb-3">
+      <div class="mt-5">
+        <form action="/menu/update_plate/{{plate.id}}" method="post" class="card">
+          <div class="card-body p4">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Nombre de plato</label>
+              <input type="text" name="name" placeholder="Write a name plate" class="form-control" id="exampleFormControlInput1 validationDefault01" value="{{plate.name}}" required/>
+            </div>
+            <div class="mb-3">
+               <label for="exampleFormControlInput1" class="form-label">Precio de plato</label>
+               <input type="text" name="price" placeholder="Write a price" class="form-control" id="exampleFormControlInput1 validationDefault05" pattern="[0-9]+" value="{{plate.price}}" required />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Descripción del producto</label>
+               <input type="text" name="description" placeholder="Write a description" class="form-control" id="exampleFormControlInput1 validationDefault01" value="{{plate.description}}" />
+            </div>
+            <button class="btn btn-primary">Actualizar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+  </div> 

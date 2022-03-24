@@ -10,3 +10,10 @@ home = Blueprint('home', __name__)
 @home.route('/')
 def welcome():
     return redirect(url_for('user.login'))
+
+
+@home.route('/index', methods=['GET', 'POST'])
+def go_home():
+    if request.method == 'POST':
+        return render_template('menu/home.html')
+    return render_template('menu/home.html')

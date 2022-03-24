@@ -65,3 +65,12 @@ input[type="text"] {
     height: 100%;
   }
 }
+
+h2,
+p {
+    color: #eceff4;
+}
+
+.text-muted {
+    color: #e5e9f0;
+}

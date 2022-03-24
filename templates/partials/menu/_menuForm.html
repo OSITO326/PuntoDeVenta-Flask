@@ -1,0 +1,19 @@
+<div class="mt-5">
+  <form action="{{url_for('menu.add_plate')}}" method="post" class="card" >
+    <div class="card-body p-4">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nombre de plato</label>
+        <input type="text" name="name" placeholder="Write a name plate" class="form-control" id="exampleFormControlInput1 validationDefault01" required />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Precio de plato</label>
+        <input type="text" name="price" placeholder="Write a price" class="form-control" id="exampleFormControlInput1 validationDefault05" pattern="[0-9]+" required/>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Descripción del producto</label>
+        <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3" style="background-color: #ECEFF4;" required></textarea>
+      </div>
+      <button class="btn btn-primary">Registrar plato</button>
+    </div>
+  </form>
+</div>

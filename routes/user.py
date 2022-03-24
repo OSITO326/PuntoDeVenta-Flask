@@ -53,11 +53,13 @@ def add_user():
     return 'error'
 
 
-@user.route('/show_users', methods=['POST'])
+@user.route('/show_users', methods=['GET', 'POST'])
 def show_users():
     user = User.query.all()
     if request.method == 'POST':
         return render_template('/auth/show.html', users=user)
+        if request.method == 'GET':
+            return render_template('/auth/show.html', users=user)
     return render_template('/auth/show.html', users=user)
 
 
@@ -84,3 +86,9 @@ def delete_user(id):
     db.session.commit()
     flash('User deleted successfully!')
     return redirect(url_for('user.login'))
+
+
+@user.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('home.welcome'))
