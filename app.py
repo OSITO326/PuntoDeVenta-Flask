@@ -1,5 +1,5 @@
 from flask import Flask
-# from routes.home import home
+from routes.home import home
 from routes.user import user
 # from routes.menu import menu
 from flask_sqlalchemy import SQLAlchemy
@@ -14,3 +14,4 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 SQLAlchemy(app)
 
 app.register_blueprint(user)
+app.register_blueprint(home)
