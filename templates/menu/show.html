@@ -13,7 +13,6 @@
           <th>Nombre del plato</th>
           <th>Descripción</th>
           <th>Precio (Bs.)</th>
-          <th colspan="2">Operationes</th>
         </tr>
       </thead>
       <tbody>
@@ -22,12 +21,6 @@
             <td>{{ plate.name }}</td>
             <td>{{ plate.description }}</td>
             <td>{{ plate.price }} <strong>Bs.</strong></td>
-            <td>
-            <a href="{{ url_for('menu.update_plate', id=plate.id) }}" class="btn btn-warning btn-sm">Editar</a>
-            </td>
-            <td>
-            <a href="{{ url_for('menu.delete_plate', id=plate.id) }}" class="btn btn-danger btn-sm btn-delete">Eliminar</a>
-            </td>
           </tr>
         {% endfor %}
       </tbody>
