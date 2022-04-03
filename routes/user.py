@@ -20,6 +20,29 @@ def index():
 @user.route('/login')
 def login():
     return render_template('auth/singin.html')
+
+
+# @user.route('/login', methods=['GET', 'POST'])
+# def login():
+    # if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
+        # username = request.form['username']
+        # password = request.form['password']
+        # passhash = generate_password_hash(password)
+        # user = User.query.filter_by(username=username).first()
+        # check_pass = check_password_hash(user.password, password)
+        # if passhash == check_pass:
+            # flash('Please check your login details and try again.')
+            # return redirect(url_for('home.go_home'))
+    # if request.method == 'POST':
+        # username = request.form['username']
+        # password = request.form['password']
+        # passhash = generate_password_hash(password)
+        # user = User.query.filter_by(username=username).first()
+        # pass_db = user.password
+        # print(pass_db)
+        # if password == passhash:
+    # return render_template('auth/singin.html')
+ # return redirect(url_for('user.login'))
 # @user.route('/login', methods=['GET', 'POST'])
 # def login():
     # if request.method == 'POST':
