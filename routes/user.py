@@ -43,6 +43,7 @@ def login():
         # if password == passhash:
     # return render_template('auth/singin.html')
  # return redirect(url_for('user.login'))
+
 # @user.route('/login', methods=['GET', 'POST'])
 # def login():
     # if request.method == 'POST':
