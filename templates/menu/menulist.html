@@ -1,0 +1,30 @@
+{% extends 'base/menu.html' %}
+
+{% block header %}
+  <h1>{% block title %}Lista Menú {% endblock %}</h1>
+{% endblock %}
+
+{% block body %}
+  {% include 'partials/messages/_messages.html' %}
+  <div class="mb-3">
+    <table class="table table-bordered table-hover table-dark table-stripped card-body">
+      <thead>
+        <tr>
+          <th>Nombre del plato</th>
+          <th>Descripción</th>
+          <th>Precio (Bs.)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for plate in menu %}
+          <tr>
+            <td>{{ plate.name }}</td>
+            <td>{{ plate.description }}</td>
+            <td>{{ plate.price }} <strong>Bs.</strong></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
+

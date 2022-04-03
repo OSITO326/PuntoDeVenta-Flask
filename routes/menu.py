@@ -20,6 +20,12 @@ def show_plates():
     return render_template('/menu/show.html', menu=menu)
 
 
+@menu.route('/list_menu')
+def list_menu():
+    menu = Menu.query.all()
+    return render_template('/menu/menulist.html', menu=menu)
+
+
 @menu.route('/register_plate')
 def register_plate():
     return render_template('menu/register.html')
