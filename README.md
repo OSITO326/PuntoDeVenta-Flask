@@ -32,10 +32,10 @@ To activate the virtual enviroment with the next command.
 . venv/Scripts/activate
 ```
 Once activate the virtual enviroment in the promp you see the (venv).
-After you activate the virtual enviroment, you proceed to install the requirements while you see (venv). 
 
 ### Install requirements
 On python install your requirements with the comand.
+After you activate the virtual enviroment, you proceed to install the requirements while you see (venv). 
 ```bash
 python -r install requirements.txt 
 
